@@ -35,4 +35,14 @@ public class RouteServiceImpl implements RouteService {
     }
     return routes.getLast();
   }
+
+  @Override
+  public List<Route> routes() {
+    return routeRepository.all();
+  }
+
+  @Override
+  public void reset(List<Route> routes) {
+    routeRepository.reset(routes);
+  }
 }

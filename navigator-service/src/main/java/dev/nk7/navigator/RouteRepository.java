@@ -13,4 +13,5 @@ public interface RouteRepository {
 
   List<Route> all();
 
+  void reset(List<Route> routes);
 }
