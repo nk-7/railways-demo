@@ -31,7 +31,8 @@ public class RouteController {
   }
 
   @PostMapping("/routes")
-  ResponseEntity<List<Route>> routes(@RequestBody List<Route> routes) {
-    return ResponseEntity.ok(routeService.routes());
+  ResponseEntity<Void> routes(@RequestBody List<Route> routes) {
+    routeService.reset(routes);
+    return ResponseEntity.ok().build();
   }
 }
